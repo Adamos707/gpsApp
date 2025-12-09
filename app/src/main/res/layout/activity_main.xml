@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+        <TextView
+            android:id="@+id/text_network"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Network status"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/text_gps"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="GPS status"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/bestprovider"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="provider" />
+
+        <TextView
+            android:id="@+id/bestprovider2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="provider2" />
+
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="longitude" />
+
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="latitude" />
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/osm"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/archival_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="archival data" />
+        </ScrollView>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
